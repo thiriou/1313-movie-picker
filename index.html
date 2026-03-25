@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="The ultimate guide to David DeCoteau's 1313 series — random film picker for all 14 entries">
+  <meta name="keywords" content="1313, David DeCoteau, horror, movie picker, haunted frat, frankenqueen, giant killer bees, bigfoot island">
+  <meta name="GENERATOR" content="DeCoteau Fan Archive v1.3.1.3">
+  <title>:: 1313 :: THE DAVID DeCOTEAU SHRINE ::</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- scanline overlay for CRT feel -->
+  <div class="scanlines" aria-hidden="true"></div>
+  <!-- animated star field -->
+  <div class="stars" id="stars" aria-hidden="true"></div>
+
+  <div class="page-wrap">
+
+    <!-- HEADER — freestanding, no box -->
+    <div class="site-header">
+      <div class="title-number">1313</div>
+      <div class="title-sub">THE DAVID DeCOTEAU SHRINE</div>
+      <div class="title-tagline">:: a comprehensive archive of the complete series ::</div>
+    </div>
+
+    <div class="hr-deco">✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦</div>
+
+    <div class="intro-box">
+      <p>
+        <font color="#FF0000">★</font>
+        Welcome to the ultimate archive of the <b>1313 series</b> by cult director <b>David DeCoteau</b>.
+        14 films. One Malibu mansion. Infinite shirtless men wandering slowly through corridors.
+        <font color="#FF0000">★</font>
+      </p>
+      <p>Press the glowing button below to receive your film assignment. The mansion awaits.</p>
+    </div>
+
+    <!-- THREE COLUMN TABLE LAYOUT -->
+    <table class="main-table" border="0" cellpadding="0" cellspacing="8" width="100%">
+      <tr valign="top">
+
+        <!-- LEFT SIDEBAR -->
+        <td class="col-left" width="185">
+
+          <div class="side-box">
+            <div class="side-box-title">&gt;&gt; ABOUT 1313 &lt;&lt;</div>
+            <p class="side-text">
+              The <b>1313 series</b> was produced &amp; directed by
+              David DeCoteau between <b>2011–2012</b>. All 14 films shot
+              primarily at his Malibu mansion, featuring homoerotic
+              slow-cinema aesthetics, blue filters, and very little plot.
+            </p>
+            <p class="side-text">
+              Films: <b>14</b><br>
+              Years: <b>2011–2012</b><br>
+              Dir: <b>DeCoteau</b>
+            </p>
+          </div>
+
+        </td>
+
+        <!-- CENTER: PICKER -->
+        <td class="col-center" id="picker">
+
+          <div class="picker-box">
+            <div class="picker-title">&gt;&gt; RANDOM FILM PICKER &lt;&lt;</div>
+
+            <!-- Card zone -->
+            <div class="card-zone" id="cardZone">
+
+              <!-- Placeholder state -->
+              <div id="statePlaceholder" class="state-box">
+                <div class="ph-icon">🎬</div>
+                <div class="ph-text">CLICK THE BUTTON<br>TO ENTER THE MANSION</div>
+                <div class="ph-sub blink">...awaiting your command...</div>
+              </div>
+
+              <!-- Loading state -->
+              <div id="stateLoading" class="state-box hidden">
+                <div class="ph-icon">📼</div>
+                <div class="ph-text blink">LOADING FROM THE ARCHIVE...</div>
+                <div class="load-bar">
+                  <div class="load-fill" id="loadFill"></div>
+                </div>
+              </div>
+
+              <!-- Result state -->
+              <div id="stateResult" class="hidden">
+                <table class="result-table" border="0" cellpadding="8" cellspacing="0" width="100%">
+                  <tr>
+                    <td class="poster-td" width="160" valign="top">
+                      <div class="poster-frame">
+                        <img id="poster" src="" alt="poster" style="display:none;" />
+                        <div id="noPoster" class="no-poster-text">[ NO IMAGE<br>IN ARCHIVE ]</div>
+                      </div>
+                    </td>
+                    <td class="info-td" valign="top">
+                      <div class="res-prefix" id="resPrefix">1313:</div>
+                      <div class="res-title" id="resTitle">—</div>
+                      <div class="res-divider">- - - - - - - - - - - -</div>
+                      <div class="res-row">
+                        <span class="res-label">YEAR: </span>
+                        <span class="res-val" id="resYear">—</span>
+                      </div>
+                      <div class="res-row">
+                        <span class="res-label">GENRE: </span>
+                        <span class="res-val" id="resGenre">—</span>
+                      </div>
+                      <div class="res-row">
+                        <span class="res-label">IMDb: </span>
+                        <span class="res-val" id="resRating">—</span>
+                      </div>
+                      <div class="res-plot" id="resPlot"></div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+
+            </div><!-- /card-zone -->
+
+            <!-- BUTTONS -->
+            <div class="btn-area">
+              <button class="pick-btn" id="pickBtn">✦ PICK A FILM ✦</button>
+              <button class="again-btn hidden" id="againBtn">↺ PICK AGAIN ↺</button>
+            </div>
+
+            <div class="key-hint blink">[ PRESS SPACEBAR TO PICK ]</div>
+
+          </div><!-- /picker-box -->
+
+        </td>
+
+        <!-- RIGHT SIDEBAR -->
+        <td class="col-right" width="185">
+
+          <div class="side-box" id="allfilms">
+            <div class="side-box-title">&gt;&gt; ALL 14 FILMS &lt;&lt;</div>
+            <ul class="all-list" id="allList"></ul>
+          </div>
+
+        </td>
+
+      </tr>
+    </table>
+
+    <div class="hr-deco">✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦</div>
+
+    <!-- FOOTER -->
+    <div class="site-footer">
+      <p>
+        <span class="blink">★</span>
+        This page was created for fans of the 1313 series by David DeCoteau.
+        Best viewed at 800x600 resolution or higher.
+        <span class="blink">★</span>
+      </p>
+      <p>Data via OMDb API &nbsp;|&nbsp; 1313 DeCoteau Fan Archive © 2012</p>
+    </div>
+
+  </div><!-- /page-wrap -->
+
+  <script src="script.js"></script>
+</body>
+</html>
