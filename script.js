@@ -241,3 +241,29 @@ document.addEventListener("keydown", (e) => {
     pickMovie();
   }
 });
+
+// ── 00s CURSOR SPARKLE TRAIL ──────────────────────────────────
+(function initSparkle() {
+  const CHARS  = ["1", "3", "1", "3"];
+  const COLORS = ["#ff4400", "#ff8800", "#ffcc00", "#ff2200", "#ffffff"];
+  let last = 0;
+  let charIdx = 0;
+
+  document.addEventListener("mousemove", function(e) {
+    const now = Date.now();
+    if (now - last < 45) return;
+    last = now;
+
+    const spark = document.createElement("span");
+    spark.className   = "cursor-spark";
+    spark.textContent = CHARS[charIdx % CHARS.length];
+    charIdx++;
+    spark.style.left     = e.pageX + "px";
+    spark.style.top      = e.pageY + "px";
+    spark.style.color    = COLORS[Math.floor(Math.random() * COLORS.length)];
+    spark.style.fontSize = (Math.random() * 8 + 10) + "px";
+    document.body.appendChild(spark);
+
+    setTimeout(() => spark.remove(), 800);
+  });
+})();
