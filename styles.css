@@ -639,12 +639,17 @@ b             { color: var(--orange); }
 }
 
 /* ── HOWLING LOGO ────────────────────────────────── */
+.howling-logo-link {
+  display: block;
+  width: 100px;
+  max-width: 100px;
+  margin: 4px auto 6px;
+}
 .howling-logo {
   display: block;
   width: 100px;
   max-width: 100px;
   height: auto;
-  margin: 4px auto 6px;
   mix-blend-mode: screen;
   filter: hue-rotate(180deg) saturate(2) brightness(1.1);
   transition: filter 0.3s ease;
@@ -888,4 +893,3 @@ b             { color: var(--orange); }
   .title-number { font-size: 68px; }
   .pick-btn, .again-btn { font-size: 20px; padding: 8px 20px; }
 }
- 
