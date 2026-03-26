@@ -638,6 +638,51 @@ b             { color: var(--orange); }
   margin-bottom: 8px;
 }
 
+/* ── HOWLING LOGO ────────────────────────────────── */
+.howling-logo {
+  display: block;
+  width: 100px;
+  max-width: 100px;
+  height: auto;
+  margin: 4px auto 6px;
+  mix-blend-mode: screen;
+  filter: hue-rotate(180deg) saturate(2) brightness(1.1);
+  transition: filter 0.3s ease;
+}
+.howling-logo:hover {
+  filter: hue-rotate(200deg) saturate(3) brightness(1.4);
+}
+
+/* ── SHRINE LINKS ────────────────────────────────── */
+.gc-links {
+  padding: 8px 10px;
+  background: #0d0000;
+  box-shadow: inset 0 0 0 1px #3a1010;
+  margin: 8px 10px;
+}
+.gc-link {
+  display: block;
+  font-family: 'VT323', monospace;
+  font-size: 13px;
+  color: var(--orange);
+  text-decoration: none;
+  padding: 2px 0;
+  letter-spacing: 0.05em;
+  transition: color 0.15s, transform 0.15s;
+}
+.gc-link:hover {
+  color: var(--yellow);
+  transform: translateX(3px);
+}
+.gc-link-sub {
+  margin-top: 6px;
+  font-family: 'VT323', monospace;
+  font-size: 11px;
+  color: var(--dim-red);
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
 /* ── AWARD BOX ───────────────────────────────────── */
 .award-box {
   text-align: center;
