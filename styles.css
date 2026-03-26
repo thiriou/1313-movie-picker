@@ -33,11 +33,11 @@ body {
     radial-gradient(ellipse at 80% 20%, #2a030344 0%, transparent 60%),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Crect width='1' height='1' fill='%23ffffff04'/%3E%3C/svg%3E");
   color: var(--cream);
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='24' viewBox='0 0 20 24'%3E%3Cpath d='M3 1 L3 20 L7 16 L11 24 L13 23 L9 15 L15 15 Z' fill='%231a0000' stroke='%23cc0000' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E") 3 1, auto;
   font-family: 'Share Tech Mono', 'Courier New', monospace;
   font-size: 14px;
   line-height: 1.6;
   overflow-x: hidden;
-  cursor: crosshair;
 }
 
 a             { color: var(--orange); text-decoration: underline; }
@@ -656,6 +656,25 @@ b             { color: var(--orange); }
 }
 .howling-logo:hover {
   filter: hue-rotate(200deg) saturate(3) brightness(1.4);
+}
+
+/* ── 1313 CURSOR TRAIL ───────────────────────────── */
+.cursor-spark {
+  position: absolute;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  animation: trail-fade 0.8s ease-out forwards;
+  font-family: 'VT323', monospace;
+  font-weight: bold;
+  line-height: 1;
+  user-select: none;
+  text-shadow: 0 0 6px currentColor;
+}
+@keyframes trail-fade {
+  0%   { opacity: 1;   transform: translate(-50%, -50%) scale(1.1); }
+  60%  { opacity: 0.5; transform: translate(-50%, -60%)  scale(0.9); }
+  100% { opacity: 0;   transform: translate(-50%, -110%) scale(0.6); }
 }
 
 /* ── SHRINE LINKS ────────────────────────────────── */
